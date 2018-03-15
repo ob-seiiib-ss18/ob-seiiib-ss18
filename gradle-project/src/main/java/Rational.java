@@ -16,13 +16,18 @@ class Rational {
     denom = d;
   }
 
-  void setZero() {
+  void set(double d) {
+    numer = (int) d;
+    denom = 1;
+  }
+
+  void set() {
     numer = 0;
     denom = 1;
   }
 
   void mult(final Rational that) {
-    numer *= that.numer;
+    this.numer = this.numer * that.numer;
     denom *= that.denom;
   }
 }
