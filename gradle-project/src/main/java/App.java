@@ -1,22 +1,26 @@
 class App {
+
   public static void main(String[] args) {
-    Rational r = new Rational();
-    r.numer = 1;
-    r.denom = 9;
-    r.print();
 
+    Rational r = new Rational(10, 90); // 1/9
 
+    Rational s = new Rational(r);
 
-    Rational s = new Rational();
-    s.set(2);
+    Rational t = new Rational();
 
-    s.print();
-
-    s.mult(r);
-
-    r.mult(s);
+    Rational u = new Rational(5);
 
     r.print();
     s.print();
+
+    System.out.println("Zähler von r: " + r.numer);
+    System.out.println("Zähler von r: " + r.getNumer());
+
+    r.print();
+    s.print();
+
+    int x = r.signum();
+
+
   }
 }

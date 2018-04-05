@@ -1,6 +1,43 @@
 class Rational {
-  int numer;
-  int denom;
+
+  int numer = 0;
+  int denom = 1;
+
+  {
+    // if...
+    System.out.println("Initialisiere.");
+  }
+
+  Rational() {
+    System.out.println("Erzeuge Bruch.");
+  }
+
+  Rational(int n, int d) {
+    this();
+    numer = n;
+    if (d == 0) {
+      denom = 1;
+    } else {
+      denom = d;
+    }
+  }
+
+  Rational(final int numer) {
+    this(numer, 1);
+    System.out.println("Springe zu anderem Konstruktor");
+  }
+
+  Rational(final Rational other) {
+    this();
+    this.numer = other.numer;
+    this.denom = other.denom;
+  }
+
+
+  int getNumer() {
+    return numer;
+  }
+
 
   void print() {
     System.out.printf("%d/%d%n", numer, denom);
@@ -30,4 +67,17 @@ class Rational {
     this.numer = this.numer * that.numer;
     denom *= that.denom;
   }
+
+  int signum() {
+
+    if (numer * denom > 0) {
+      return +1;
+    }
+    if (numer == 0) {
+      return 0;
+    }
+    return -1;
+
+  }
+
 }
