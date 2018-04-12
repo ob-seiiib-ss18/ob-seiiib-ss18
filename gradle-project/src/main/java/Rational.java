@@ -1,7 +1,7 @@
 class Rational {
 
-  int numer = 0;
-  int denom = 1;
+  private int numer = 0;
+  private int denom = 1;
 
   {
     // if...
@@ -29,7 +29,7 @@ class Rational {
 
   Rational(final Rational other) {
     this();
-    this.numer = other.numer;
+    this.numer = other.getNumer();
     this.denom = other.denom;
   }
 
@@ -63,20 +63,23 @@ class Rational {
     denom = 1;
   }
 
-  void mult(final Rational that) {
-    this.numer = this.numer * that.numer;
-    denom *= that.denom;
+  void mult(final Rational other) {
+    this.numer = this.numer * other.numer;
+    denom *= other.denom;
   }
 
   int signum() {
 
+    int result = -1;
+
     if (numer * denom > 0) {
-      return +1;
+      result = +1;
     }
     if (numer == 0) {
-      return 0;
+      result = 0;
     }
-    return -1;
+    return result;
+
 
   }
 

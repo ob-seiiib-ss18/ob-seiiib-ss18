@@ -13,7 +13,7 @@ class App {
     r.print();
     s.print();
 
-    System.out.println("Zähler von r: " + r.numer);
+    System.out.println("Zähler von r: " + r.getNumer());
     System.out.println("Zähler von r: " + r.getNumer());
 
     r.print();
