@@ -73,7 +73,7 @@ public class Rational {
     denom *= other.denom;
   }
 
-  private int signum() {
+  int signum() {
 
     int result = -1;
 
