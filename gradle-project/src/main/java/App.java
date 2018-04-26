@@ -13,6 +13,8 @@ class App {
     r.print();
     s.print();
 
+    s.set(12);
+
     System.out.println("Zähler von r: " + r.getNumer());
     System.out.println("Zähler von r: " + r.getNumer());
 

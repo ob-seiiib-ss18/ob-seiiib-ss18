@@ -1,7 +1,7 @@
-class Rational {
+public class Rational {
 
-  private int numer = 0;
-  private int denom = 1;
+  int numer = 0;
+  int denom = 1;
 
   {
     // if...
@@ -53,6 +53,11 @@ class Rational {
     denom = d;
   }
 
+  void set(int n) {
+    numer = n;
+    denom = 1;
+  }
+
   void set(double d) {
     numer = (int) d;
     denom = 1;
@@ -68,7 +73,7 @@ class Rational {
     denom *= other.denom;
   }
 
-  int signum() {
+  private int signum() {
 
     int result = -1;
 
