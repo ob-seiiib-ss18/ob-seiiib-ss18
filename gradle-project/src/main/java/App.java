@@ -2,26 +2,26 @@ class App {
 
   public static void main(String[] args) {
 
-    Rational r = new Rational(10, 90); // 1/9
+    System.out.println("count = " + Rational.getCount());
 
-    Rational s = new Rational(r);
 
-    Rational t = new Rational();
 
-    Rational u = new Rational(5);
+    Rational a = new Rational(5, 7);
+    System.out.println("count = " + Rational.getCount());
+    Rational b = new Rational(3, 2);
+    System.out.println("count = " + Rational.getCount());
 
-    r.print();
-    s.print();
+    a.print();
+    b.print();
 
-    s.set(12);
+    Rational c = b.mult(a);
+    System.out.println("count = " + Rational.getCount());
 
-    System.out.println("Zähler von r: " + r.getNumer());
-    System.out.println("Zähler von r: " + r.getNumer());
+    a.print();
+    b.print();
+    c.print();
 
-    r.print();
-    s.print();
 
-    int x = r.signum();
 
 
   }
