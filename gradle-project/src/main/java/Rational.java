@@ -29,7 +29,7 @@ public class Rational {
   }
 
   Rational(final Rational other) {
-    this.numer = other.getNumer();
+    this.numer = other.numer;
     this.denom = other.denom;
     count++;
     serial = count;

@@ -2,27 +2,18 @@ class App {
 
   public static void main(String[] args) {
 
-    System.out.println("count = " + Rational.getCount());
+    int i = 527364;
 
+    String dayStr = "Hallo";
 
+    Day day = Day.valueOf("Wed"); // == Day.Wed
 
-    Rational a = new Rational(5, 7);
-    System.out.println("count = " + Rational.getCount());
-    Rational b = new Rational(3, 2);
-    System.out.println("count = " + Rational.getCount());
+    for (Day d : Day.values()) {
 
-    a.print();
-    b.print();
-
-    Rational c = b.mult(a);
-    System.out.println("count = " + Rational.getCount());
-
-    a.print();
-    b.print();
-    c.print();
-
-
+      System.out.println(d + ": " + d.isWeekend());
+    }
 
 
   }
+
 }
