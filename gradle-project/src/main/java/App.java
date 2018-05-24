@@ -1,19 +1,39 @@
+import java.util.List;
+
 class App {
 
   public static void main(String[] args) {
 
-    int i = 527364;
+    List list = new List();
 
-    String dayStr = "Hallo";
 
-    Day day = Day.valueOf("Wed"); // == Day.Wed
+    Rational s = new Rational(5, 6);
+    Rational r = s;
+    Rational t = new Rational(5, 6);
 
-    for (Day d : Day.values()) {
-
-      System.out.println(d + ": " + d.isWeekend());
+    if (s.equals(list)) {
+      //...
     }
 
 
-  }
+    if (s.equals(r)) {
+      System.out.println("s und r gleich");
+    } else {
+      System.out.println("s und r nicht gleich");
+    }
 
+    if (s.equals(t)) {
+      System.out.println("s und t gleich");
+    } else {
+      System.out.println("s und t nicht gleich");
+    }
+
+    System.out.println(r.toString());
+
+    System.out.println(r.hashCode());
+
+    System.out.println(0x763d9750);
+
+
+  }
 }

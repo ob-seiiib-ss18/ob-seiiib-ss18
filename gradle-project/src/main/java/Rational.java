@@ -1,3 +1,5 @@
+import com.google.j2objc.annotations.ObjectiveCName;
+
 public class Rational {
 
   private static int count;
@@ -60,8 +62,35 @@ public class Rational {
       result = 0;
     }
     return result;
-
-
   }
+
+
+  @Override
+  public boolean equals(Object x) {
+    if (x == null) {
+      return false;
+    }
+    if (this.getClass() != x.getClass()) {
+      return false;
+    }
+    Rational that = (Rational) x;
+    if (this.numer != that.numer) {
+      return false;
+    }
+    if (this.denom != that.denom) {
+      return false;
+    }
+    return true;
+  }
+
+
+  @Override
+  public int hashCode() {
+    int result = 17;
+    result = 31 * result + numer;
+    result = 31 * result + denom;
+    return result;
+  }
+
 
 }
