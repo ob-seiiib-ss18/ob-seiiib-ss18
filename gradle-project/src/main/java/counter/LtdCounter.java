@@ -1,19 +1,23 @@
+package counter;
+
 class LtdCounter extends OpenCounter {
 
   private final int limit;
 
-  LtdCounter(final int limit) {
+  public LtdCounter(final int limit) {
+    super();
     this.limit = limit;
   }
 
-  int getLimit() {
+  public int getLimit() {
     return limit;
   }
 
   @Override
-  void step() {
+  public LtdCounter step() {
     if (read() < limit) {
-      setCount(read() + 1);
+      super.step();
     }
+    return this;
   }
 }
