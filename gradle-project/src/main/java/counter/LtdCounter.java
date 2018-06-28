@@ -1,6 +1,6 @@
 package counter;
 
-class LtdCounter extends OpenCounter {
+public class LtdCounter extends OpenCounter {
 
   private final int limit;
 

@@ -1,49 +1,29 @@
+import counter.Counter;
 import counter.LoopCounter;
-import counter.LtdCounter;
 import counter.MemCounter;
 import counter.OpenCounter;
+import java.util.List;
 
 class App {
 
   public static void main(String[] args) {
 
 
-   System.out.println( (new OpenCounter()).step().step().step().read());
+    int[] myInts = new int[] {1, 2, 3, 4, 9, 10, 11};
 
 
-    LtdCounter c = new LtdCounter(3);
+    for (int i = 0 ; i < myInts.length ; i++ ) {
+      System.out.print(myInts[i] + ", ");
+    }
 
-    for (int i = 0; i < 10; i++) {
-      c.step();
-      System.out.printf("%d ", c.read());
+    for (int i: myInts) {
+      System.out.print(i);
     }
 
     System.out.println();
 
-    LoopCounter l = new LoopCounter(3);
 
-    for (int i = 0; i < 10; i++) {
-      l.step();
-      System.out.printf("%d ", l.read());
-    }
 
-    System.out.println();
-
-    MemCounter m = new MemCounter();
-
-    for (int i = 0; i < 10; i++) {
-      if (i == 5) {
-        m.mark();
-      }
-      if (i == 8) {
-        m.recall();
-      } else {
-        m.step();
-      }
-      System.out.printf("%d ", m.read());
-    }
-
-    System.out.println();
 
   }
 }

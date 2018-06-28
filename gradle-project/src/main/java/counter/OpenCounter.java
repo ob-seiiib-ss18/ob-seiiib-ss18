@@ -3,27 +3,13 @@
 
 package counter;
 
-public class OpenCounter {
+public class OpenCounter extends Counter {
 
-  private int count = 0;
-  protected void setCount(final int c) {
-    count = c;
-  }
-
-  public OpenCounter() {
-    super();
-  }
 
   public OpenCounter step() {
-    count++;
+    setCount(read() + 1);
     return this;
   }
 
-  public int read() {
-    return count;
-  }
 
-  public void reset() {
-    count = 0;
-  }
 }
