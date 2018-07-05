@@ -2,6 +2,8 @@ package counter;
 
 public abstract class Counter {
 
+  static int numberOfCounterObjects;
+
   private int count = 0;
   protected void setCount(final int c) {
     count = c;

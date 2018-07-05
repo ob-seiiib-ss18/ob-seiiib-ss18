@@ -67,6 +67,9 @@ public class Rational {
 
   @Override
   public boolean equals(Object x) {
+    if (x == this) {
+      return true;
+    }
     if (x == null) {
       return false;
     }

@@ -1,29 +1,48 @@
-import counter.Counter;
-import counter.LoopCounter;
-import counter.MemCounter;
-import counter.OpenCounter;
-import java.util.List;
-
 class App {
 
-  public static void main(String[] args) {
+  public static void main(String... args) {
+
+    int[][] arr = new int[][] {{1, 2, 3}, {4, 5, 6, 8, 9}, {7}};
+
+    int elem01 = arr[0][1];
+
+    // System.out.println(sum(true, 1, 2, 3, 4));
 
 
-    int[] myInts = new int[] {1, 2, 3, 4, 9, 10, 11};
+    try {
+      System.out.println(clip("hdjhdjh"));
+
+    } catch (StringTooShortException e) {
+      System.out.println("String zu kurz");
+
+    } catch (NullPointerException e) {
+      System.out.println("da war gar nix!");
+
+    } catch (Exception e) {
 
 
-    for (int i = 0 ; i < myInts.length ; i++ ) {
-      System.out.print(myInts[i] + ", ");
+    } finally{
+
+      System.out.println("Ciao");
+
     }
 
-    for (int i: myInts) {
-      System.out.print(i);
+  }
+
+  static String clip(String s) throws StringTooShortException {
+
+    if (s.length() < 2) {
+      throw new StringTooShortException();
     }
 
-    System.out.println();
+    return s.substring(1, s.length() - 1);
+  }
 
-
-
-
+  static int sum(boolean b, int noForSum, int... numbers) {
+    int sum = 0;
+    for (int i : numbers) {
+      sum += i;
+    }
+    return sum;
   }
 }
